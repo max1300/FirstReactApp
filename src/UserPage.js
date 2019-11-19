@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import  {getUser} from "./UserService";
-import { ThreeBounce } from 'better-react-spinkit';
 import * as PropTypes from "prop-types";
 import Thead from "./Thead";
 import Tbody from "./Tbody";
+import Loader from "./Loader";
 
 Tbody.propTypes = {user: PropTypes.any};
+
 class UserPage extends Component{
     constructor(props){
         super(props);
@@ -23,19 +24,12 @@ class UserPage extends Component{
                 user:user
             }));
         }, 3000);
-
     }
 
     render = () => {
 
         if(this.state.loading){
-            return <div className="loader" style={{textAlign:"center", marginTop:"20%"}}>
-                    <ThreeBounce gutter={40} color="blue"/>
-                    <br />
-                    <ThreeBounce gutter={60} color="green"/>
-                    <br />
-                    <ThreeBounce gutter={80} color="orange"/>
-                   </div>
+            return <Loader/>
         }
 
         return this.state.user && (
@@ -46,7 +40,7 @@ class UserPage extends Component{
                         <Thead/>
                         <Tbody user={this.state.user}/>
                     </table>
-                    <a href="/">Retour à la liste</a>
+                    <a href="/" className="btn btn-info">Retour à la liste</a>
                 </div>
             </div>
         )

@@ -1,6 +1,6 @@
 import React from "react";
 
-var Tbody = (props) =>{
+let Tbody = (props) =>{
     return <tbody>
     <tr className="col-12 col-lg-4">
         <td>{props.user.name}</td>
