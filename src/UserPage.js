@@ -25,7 +25,7 @@ class UserPage extends Component{
     render = () => {
 
         if(this.state.loading){
-            return <div>
+            return <div className="loader" style={{textAlign:"center", marginTop:"20%"}}>
                     <ThreeBounce gutter={40} color="blue"/>
                     <br />
                     <ThreeBounce gutter={60} color="green"/>

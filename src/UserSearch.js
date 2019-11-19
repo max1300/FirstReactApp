@@ -5,12 +5,12 @@ class UserSearch extends Component{
         const {handleChange, searchTerm} = this.props;
 
         return(
-            <div className="row">
+            <div className="row" style={{marginBottom:"3%", marginTop:"3%", textAlign:"center"}}>
                 <div className="col">
-                    <input
+                    <input style={{width:"60%", border:"solid 1px black", height:"50px"}}
                     onChange={handleChange}
                     value={searchTerm}
-                    placeholder="Recherche..."
+                    placeholder=" Recherche..."
                     />
                 </div>
             </div>

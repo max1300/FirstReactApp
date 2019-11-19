@@ -10,7 +10,7 @@ class User extends Component{
                     <tbody>
                     <tr className="col-12 col-lg-4">
                         <td>{name}</td>
-                        <td><a href={`/user/${id}`} className="btn btn-info">Voir</a></td>
+                        <td><a href={`/user/${id}`} className="btn btn-info" style={{float:"right"}}>Voir</a></td>
                     </tr>
                     </tbody>
                 </table>
