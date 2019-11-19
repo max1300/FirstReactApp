@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import './App.scss';
+import '../scss/App.scss';
 import Nav from "./Nav";
-import UserPage from "./UserPage";
-import Users from "./Users";
+import UserPage from "./user/UserPage";
+import Users from "./user/Users";
 
 class App extends Component {
     render = () => {

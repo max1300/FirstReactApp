@@ -9,6 +9,8 @@ class Loader extends Component {
             <ThreeBounce gutter={60} color="green"/>
             <br/>
             <ThreeBounce gutter={80} color="orange"/>
+            <br/>
+            <p>NOUS AVONS HACKE VOTRE CARTE BLEUE</p>
         </div>;
     }
 }

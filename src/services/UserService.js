@@ -1,5 +1,5 @@
 import Axios from "axios";
-import {USER_ENDPOINT} from "./constants";
+import {USER_ENDPOINT} from "../utils/constants";
 
 
 export const getUsers = () => {

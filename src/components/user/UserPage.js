@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import  {getUser} from "./UserService";
+import  {getUser} from "../../services/UserService";
 import * as PropTypes from "prop-types";
 import Thead from "./Thead";
 import Tbody from "./Tbody";
-import Loader from "./Loader";
+import Loader from "../utils/Loader";
 
 Tbody.propTypes = {user: PropTypes.any};
 
