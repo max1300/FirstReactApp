@@ -1,5 +1,5 @@
 
-const res = `https://jsonplaceholder.typicode.com/users`;
+const res = `https://jsonplaceholder.typicode.com/`;
 
 export default res;
 

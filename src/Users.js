@@ -27,7 +27,7 @@ class Users extends Component {
         let userSearch = this.users;
 
         if (search !== "") {
-            userSearch = this.users.filter(user => user.name.include(search));
+            userSearch = this.users.filter(user => user.name.includes(search));
         }
 
         this.setState({
