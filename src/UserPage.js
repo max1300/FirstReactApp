@@ -1,7 +1,11 @@
 import React, {Component} from "react";
 import  {getUser} from "./UserService";
 import { ThreeBounce } from 'better-react-spinkit';
+import * as PropTypes from "prop-types";
+import Thead from "./Thead";
+import Tbody from "./Tbody";
 
+Tbody.propTypes = {user: PropTypes.any};
 class UserPage extends Component{
     constructor(props){
         super(props);
@@ -31,29 +35,18 @@ class UserPage extends Component{
                     <ThreeBounce gutter={60} color="green"/>
                     <br />
                     <ThreeBounce gutter={80} color="orange"/>
-                    </div>
+                   </div>
         }
+
         return this.state.user && (
             <div className="row">
                 <div className="col">
                     <h1>{this.state.user.name}</h1>
                     <table className="table">
-                        <thead className="thead-dark">
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="col-12 col-lg-4">
-                              <td>{this.state.user.name}</td>
-                              <td>{this.state.user.username}</td>
-                              <td>{this.state.user.email}</td>
-                            </tr>
-                        </tbody>
+                        <Thead/>
+                        <Tbody user={this.state.user}/>
                     </table>
-                        <a href="/">Retour à la liste</a>
+                    <a href="/">Retour à la liste</a>
                 </div>
             </div>
         )

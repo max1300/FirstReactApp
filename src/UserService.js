@@ -1,13 +1,13 @@
 import Axios from "axios";
-import res from "./constants";
+import {USER_ENDPOINT} from "./constants";
 
 
 export const getUsers = () => {
-    return Axios.get(res + `users`).then(
+    return Axios.get(USER_ENDPOINT).then(
         res => res.data
     );
 };
 export const getUser = async id => {
-    const result = await Axios.get(res + `users/${id}`);
+    const result = await Axios.get(USER_ENDPOINT + `/${id}`);
     return result.data;
 }
